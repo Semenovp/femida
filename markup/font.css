@@ -1,0 +1,80 @@
+@font-face {
+	font-family: 'Conv_T-STARPRO-MEDIUM';
+	src: url('fonts/T-STARPRO-MEDIUM.eot');
+	src: local('Conv_T-STARPRO-MEDIUM'), 
+	url('fonts/T-STARPRO-MEDIUM.woff') format('woff'), 
+	url('fonts/T-STARPRO-MEDIUM.ttf') format('truetype'), 
+	url('fonts/T-STARPRO-MEDIUM.svg') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family: 'Conv_T-STARPRO';
+	src: url('fonts/T-STARPRO.eot');
+	src: local('Conv_T-STARPRO'), 
+	url('fonts/T-STARPRO.woff') format('woff'), 
+	url('fonts/T-STARPRO.ttf') format('truetype'), 
+	url('fonts/T-STARPRO.svg') format('svg');
+	font-weight:normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_PFAgoraSansPro-Bold';
+	src: url('fonts/PFAgoraSansPro-Bold.eot');
+	src: local('Conv_PFAgoraSansPro-Bold'),
+	 url('fonts/PFAgoraSansPro-Bold.woff') format('woff'), 
+	 url('fonts/PFAgoraSansPro-Bold.ttf') format('truetype'), 
+	 url('fonts/PFAgoraSansPro-Bold.svg') format('svg');
+	font-weight:500;
+	font-style:normal
+}
+@font-face {
+	font-family: 'Conv_PFAgoraSansPro-Italic';
+	src: url('fonts/PFAgoraSansPro-Italic.eot');
+	src: local('Conv_PFAgoraSansPro-Italic'), 
+	url('fonts/PFAgoraSansPro-Italic.woff') format('woff'), 
+	url('fonts/PFAgoraSansPro-Italic.ttf') format('truetype'), 
+	url('fonts/PFAgoraSansPro-Italic.svg') format('svg');
+	font-weight: normal;
+	font-style:italic;
+}
+@font-face {
+	font-family: 'Conv_PFAgoraSansPro-Medium';
+	src: url('fonts/PFAgoraSansPro-Medium.eot');
+	src: local('Conv_PFAgoraSansPro-Medium'), 
+	url('fonts/PFAgoraSansPro-Medium.woff') format('woff'), 
+	url('fonts/PFAgoraSansPro-Medium.ttf') format('truetype'), 
+	url('fonts/PFAgoraSansPro-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_PFAgoraSansPro-Light';
+	src: url('fonts/PFAgoraSansPro-Light.eot');
+	src: local('Conv_PFAgoraSansPro-Light'), 
+	url('fonts/PFAgoraSansPro-Light.woff') format('woff'), 
+	url('fonts/PFAgoraSansPro-Light.ttf') format('truetype'), 
+	url('fonts/PFAgoraSansPro-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_MyriadPro-It';
+	src: url('fonts/MyriadPro-It.eot');
+	src: local('Conv_MyriadPro-It'), url('fonts/MyriadPro-It.woff') format('woff'), url('fonts/MyriadPro-It.ttf') format('truetype'), url('fonts/MyriadPro-It.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_MyriadPro-Regular';
+	src: url('fonts/MyriadPro-Regular.eot');
+	src: local('Conv_MyriadPro-Regular'), url('fonts/MyriadPro-Regular.woff') format('woff'), url('fonts/MyriadPro-Regular.ttf') format('truetype'), url('fonts/MyriadPro-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
