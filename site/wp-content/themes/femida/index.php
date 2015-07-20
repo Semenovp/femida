@@ -39,14 +39,19 @@
 	<!--end first block-->
 	<!--second block-->
 	<div class="for_client">
-		<img src="<?php bloginfo( 'template_url' ); ?>/images/bild.png" alt="" />
-		<h1>Для наших клиентов</h1>
-		<p>Повышаем комфорт  наших клиентов путем оказания спектра высокопрофессиональных услуг, содействуем развитию системы образования Украины, как важнейшей составляющей успешного экономического развития страны;<br>
-			Обеспечиваем все условия для беспрепятственной передачи накопленного нами опыта и полученных профессиональных знаний нашим клиентам с целью повысить их;<br>
-			Способствуем поднятию уровня самооценки наших клиентов и формированию мышления уверенного, самодостаточного человека - гражданина своей страны, мыслящего масштабными экономическими категориями, владеющего знаниями и желанием улучшить социальный уровень  своей семьи, верящего в потенциал и будущее своей Родины;<br>
-			Строим совместно с нашими клиентами новый уровень системы образования в стране;<br>
-			Гарантируем высочайший профессионализм сотрудников; </p>
-		<a href="#" onclick="$('#exampleModal').arcticmodal()">больше...</a>
+
+		<?php
+		    $query = new WP_Query('p=53&post_type=page');
+			while($query->have_posts()):$query->the_post();
+		?>
+				<?php the_post_thumbnail();?>
+				<h1><?php the_title();?></h1>
+					<?php the_excerpt();?>
+				<a href="#" onclick="$('#exampleModal').arcticmodal()">больше...</a>
+		<?php
+			endwhile;
+			wp_reset_postdata();
+		?>
 	</div>
 	<!--end second block-->
 
@@ -75,4 +80,69 @@
 					<div class="steps_cart_down"><p>ДАЛЬНЕЙШЕЕ<br>СОПРОВОЖДЕНИЕ</p></div>
 				</div></a>
 		</div>
-<?php get_footer();?>
+		<div class="partners">
+			<p>ПАРТНЕРЫ:</p>
+			<?php
+				$args = array(
+					'post_type' => 'partners'
+				);
+				$partners = new WP_Query($args);
+				while($partners->have_posts()):$partners->the_post();
+					$image = get_field('image');
+					?>
+					<a href="<?php echo get_field('link');?>"><img src="<?php echo $image['url'];?>" alt="" /></a>
+				<?php
+				endwhile;
+				wp_reset_postdata();
+			?>
+
+		</div>
+	</div>
+<!--end third block-->
+
+<!--end main-->
+<!--footer-->
+<div class="footer">
+	<div class="footer_top"></div>
+	<div class="footer_main">
+		<div class="logo_div"><a href="/"><img class="logo_bootom" src="<?php bloginfo( 'template_url' ); ?>/images/logo_bottom.png" alt="" /></a></div>
+		<div class="menu_bottom">
+			<div>
+				<?php wp_nav_menu(array('theme_location' => 'footer-left', 'menu_class' => ''));?>
+			</div>
+			<div>
+				<?php wp_nav_menu(array('theme_location' => 'footer-right', 'menu_class' => ''));?>
+			</div>
+		</div>
+		<div class="mail">
+			<img class="office" src="<?php bloginfo( 'template_url' ); ?>/images/office.png" alt=""><p>Украина, Ужгород, <br>ул. Гагарина 13а</p>
+			<img class="email" src="<?php bloginfo( 'template_url' ); ?>/images/mail.png" alt=""><a href="mailto:name@email.com">femida94@mail.ru</a>
+		</div>
+	</div>
+	<div class="footer_bottom"></div>
+</div>
+<!-- end footer-->
+<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.easy-ticker.min.js" type="text/javascript"></script>
+<script src="<?php bloginfo( 'template_url' ); ?>/js/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+<script src="<?php bloginfo( 'template_url' ); ?>/js/scripts.js" type="text/javascript"></script>
+<?php wp_footer();?>
+<!--PopUp-->
+<div style="display:none;">
+	<div class="box-modal" id="exampleModal">
+		<div class="box-modal_close arcticmodal-close"><img src="<?php bloginfo( 'template_url' ); ?>/images/close.png"></div>
+		<?php
+			$query = new WP_Query('p=53&post_type=page');
+			while($query->have_posts()):$query->the_post();
+			$image = get_field('pop-up');
+		?>
+		<img src="<?php echo $image['url'];?>">
+			<h1><?php the_title();?></h1>
+			<?php the_content();?>
+		<?php
+			endwhile;
+			wp_reset_postdata();
+		?>
+	</div>
+</div>
+<!--end PopUp-->
